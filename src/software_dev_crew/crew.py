@@ -10,25 +10,25 @@ class SoftwareDevCrew:
     tasks_config = 'config/tasks.yaml'
 
     @agent
-    def senior_engineer_agent(self) -> Agent:
+    def product_manager(self) -> Agent:
         return Agent(
-            config=self.agents_config['senior_engineer_agent'],
+            config=self.agents_config['product_manager'],
             allow_delegation=False,
             verbose=True
         )
     
     @agent
-    def qa_engineer_agent(self) -> Agent:
+    def software_engineer(self) -> Agent:
         return Agent(
-            config=self.agents_config['qa_engineer_agent'],
+            config=self.agents_config['software_engineer'],
             allow_delegation=False,
             verbose=True
         )
     
     @agent
-    def chief_qa_engineer_agent(self) -> Agent:
+    def qa_engineer(self) -> Agent:
         return Agent(
-            config=self.agents_config['chief_qa_engineer_agent'],
+            config=self.agents_config['qa_engineer'],
             allow_delegation=True,
             verbose=True,
             tools=[FileWriterTool()]
@@ -36,25 +36,24 @@ class SoftwareDevCrew:
     
 
     @task
-    def code_task(self) -> Task:
+    def requirements_analysis_task(self) -> Task:
         return Task(
-            config=self.tasks_config['code_task'],
-            agent=self.senior_engineer_agent()
+            config=self.tasks_config['requirements_analysis_task'],
+            agent=self.product_manager()
         )
 
     @task
-    def review_task(self) -> Task:
+    def development_task(self) -> Task:
         return Task(
-            config=self.tasks_config['review_task'],
-            agent=self.qa_engineer_agent(),
-            #### output_json=ResearchRoleRequirements
+            config=self.tasks_config['development_task'],
+            agent=self.software_engineer()
         )
 
     @task
-    def evaluate_task(self) -> Task:
+    def qa_review_task(self) -> Task:
         return Task(
-            config=self.tasks_config['evaluate_task'],
-            agent=self.chief_qa_engineer_agent()
+            config=self.tasks_config['qa_review_task'],
+            agent=self.qa_engineer()
         )
 
     @crew
