@@ -1,4 +1,4 @@
-# 软件开发团队
+# 软件开发团队 CrewAI A2A 模板
 
 ## 简介
 本项目使用 CrewAI 框架自动化软件开发任务。CrewAI 协调自主 AI 代理协作构建各类软件项目，支持多种编程语言（Python、JavaScript/TypeScript、Go、Rust、Java 等），包括 CLI 工具、Web 应用、桌面应用、移动应用等。
