@@ -1,20 +1,22 @@
 # 软件开发团队
 
 ## 简介
-本项目使用 CrewAI 框架自动化软件开发任务。CrewAI 协调自主 AI 代理协作构建 Python 软件，包括 CLI 工具、实用程序、库和应用程序。
+本项目使用 CrewAI 框架自动化软件开发任务。CrewAI 协调自主 AI 代理协作构建各类软件项目，支持多种编程语言（Python、JavaScript/TypeScript、Go、Rust、Java 等），包括 CLI 工具、Web 应用、桌面应用、移动应用等。
 
 ## 功能特性
-- **通用软件开发**：构建任何类型的 Python 软件
+- **多语言支持**：支持 Python、JavaScript/TypeScript、Go、Rust、Java 等多种编程语言
+- **全栈开发能力**：前端框架（React、Vue、Svelte）、后端框架（FastAPI、Express、Django）
 - **自动化代码审查**：多阶段质量保证流程
 - **交互式和命令行模式**：支持交互式使用或通过命令行参数
 - **生产就绪代码**：生成完整、有文档且经过测试的代码
 
 ## 支持的项目类型
-- CLI 工具
-- Python 库
+- CLI 工具（多语言）
+- 各类编程语言库（Python、JavaScript、Go 等）
 - 实用程序和脚本
-- Web 应用
+- Web 应用（前端 + 后端）
 - 桌面应用
+- 移动应用
 - 数据处理工具
 
 ## CrewAI 框架
