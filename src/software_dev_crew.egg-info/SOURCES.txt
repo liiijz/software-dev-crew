@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/software_dev_crew/__init__.py
+src/software_dev_crew/crew.py
+src/software_dev_crew/main.py
+src/software_dev_crew.egg-info/PKG-INFO
+src/software_dev_crew.egg-info/SOURCES.txt
+src/software_dev_crew.egg-info/dependency_links.txt
+src/software_dev_crew.egg-info/entry_points.txt
+src/software_dev_crew.egg-info/requires.txt
+src/software_dev_crew.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+software_dev_crew = software_dev_crew.main:run
+train = software_dev_crew.main:train

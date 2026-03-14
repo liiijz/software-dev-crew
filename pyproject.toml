@@ -1,0 +1,26 @@
+[project]
+name = "software-dev-crew"
+version = "0.1.0"
+description = "A generic software development crew for building CLI tools, utilities, libraries, and applications"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "crewai[tools]",
+    "python-dotenv==1.0.0",
+]
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[tool.uv]
+package = true
+
+[project.scripts]
+software_dev_crew = "software_dev_crew.main:run"
+train = "software_dev_crew.main:train"

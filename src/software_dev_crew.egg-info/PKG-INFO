@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: software-dev-crew
+Version: 0.1.0
+Summary: A generic software development crew for building CLI tools, utilities, libraries, and applications
+Requires-Python: <3.12,>=3.10
+Requires-Dist: crewai[tools]
+Requires-Dist: python-dotenv==1.0.0
