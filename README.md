@@ -29,13 +29,60 @@ CrewAI 促进角色扮演 AI 代理之间的协作。本团队包括：
 - Python 3.10 或 3.11
 - 兼容的 LLM API 访问权限（OpenAI、千问等）
 
-### 配置步骤
-1. **配置环境**：创建 `.env` 文件并填入 API 凭证：
-   ```env
-   OPENAI_API_KEY=你的API密钥
-   OPENAI_API_BASE=你的API基础URL  # 可选，用于自定义端点
-   OPENAI_MODEL_NAME=openai/你的模型名称
-   ```
+### 使用 uv 安装和运行（推荐）
+
+#### 1. 安装 uv
+uv 是一个极快的 Python 包管理器和项目管理工具。
+
+**Windows (PowerShell)**：
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+**macOS/Linux**：
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**使用 pip**：
+```bash
+pip install uv
+```
+
+#### 2. 配置环境变量
+创建 `.env` 文件并填入 API 凭证：
+```env
+OPENAI_API_KEY=你的API密钥
+OPENAI_API_BASE=你的API基础URL  # 可选，用于自定义端点
+OPENAI_MODEL_NAME=openai/你的模型名称
+```
+
+#### 3. 安装项目依赖
+使用 uv 同步安装所有依赖：
+```bash
+uv sync
+```
+
+这将自动：
+- 创建虚拟环境（如果不存在）
+- 安装 `pyproject.toml` 中定义的所有依赖
+- 以可编辑模式安装项目本身
+
+#### 4. 运行项目
+使用 uv 运行项目：
+```bash
+# 交互模式
+uv run software_dev_crew
+
+# 命令行模式
+uv run software_dev_crew "CLI 工具" "创建一个支持正则表达式的批量文件重命名工具"
+```
+
+### 传统安装方式（使用 pip）
+
+如果不使用 uv，可以使用传统的 pip 方式：
+
+1. **配置环境**：创建 `.env` 文件（同上）
 
 2. **安装依赖**：
    ```bash
