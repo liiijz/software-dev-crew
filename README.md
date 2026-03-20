@@ -7,6 +7,7 @@
 - **多语言支持**：支持 Python、JavaScript/TypeScript、Go、Rust、Java 等多种编程语言
 - **全栈开发能力**：前端框架（React、Vue、Svelte）、后端框架（FastAPI、Express、Django）
 - **自动化代码审查**：多阶段质量保证流程
+- **实时流式输出**：实时显示 AI 代理的思考和工作过程，提供更好的用户体验
 - **交互式和命令行模式**：支持交互式使用或通过命令行参数
 - **生产就绪代码**：生成完整、有文档且经过测试的代码
 
@@ -150,6 +151,31 @@ software-dev-crew/
 - **`crew.py`**：定义代理团队和工作流
 - **`agents.yaml`**：配置代理角色和能力
 - **`tasks.yaml`**：定义开发、审查和评估任务
+
+## 更新日志
+
+### 最新更新 (2026-03-20)
+
+#### 依赖升级
+- **CrewAI**: 升级到 `1.11.0` 版本
+- **Python 支持**: 扩展到 Python 3.10-3.13（之前仅支持 3.10-3.11）
+- **依赖管理**: 移除 `python-dotenv` 显式依赖（已包含在 crewai 中）
+- **构建系统**: 添加 hatchling 构建后端配置
+
+#### 功能改进
+- **流式输出**: 启用实时流式输出，可以实时查看 AI 代理的工作过程
+- **环境变量**: 简化 LLM 配置，使用 `MODEL` 环境变量替代 `OPENAI_MODEL_NAME`
+- **输出优化**: 改进控制台输出格式，提供更清晰的执行反馈
+
+#### 配置文件更新
+- 更新 `.env.example` 使用标准的 `MODEL` 环境变量
+- 添加 `.python-version` 文件指定 Python 3.13
+- 更新 `pyproject.toml` 配置以匹配最新的 CrewAI 最佳实践
+
+#### 文档改进
+- 更新 README 中的环境变量配置说明
+- 添加 Python 版本兼容性说明
+- 改进安装和使用说明
 
 ## License
 This project is released under the MIT License.
