@@ -53,8 +53,20 @@ def run():
     # 记录开始时间
     start_time = time.time()
     
-    # 执行任务
-    result = SoftwareDevCrew().crew().kickoff(inputs=inputs)
+    print("\n\n" + "=" * 50)
+    print("## 开始执行任务...")
+    print("=" * 50 + "\n")
+    
+    # 执行任务（流式输出）
+    # 需要迭代流式对象来触发执行，CrewAI 会自动显示格式化输出
+    streaming = SoftwareDevCrew().crew().kickoff(inputs=inputs)
+    
+    # 迭代流式对象以触发执行（不打印 chunk.content）
+    for chunk in streaming:
+        pass  # CrewAI 已经自动显示格式化输出
+    
+    # 获取最终结果
+    result = streaming.result
     
     # 计算执行时间
     execution_time = time.time() - start_time
