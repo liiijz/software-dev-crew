@@ -39,7 +39,7 @@ QA 工程师（审查 + 保存）
 ## 安装
 
 ### 前置要求
-- Python 3.10 或 3.11
+- Python 3.10, 3.11, 3.12 或 3.13
 - 兼容的 LLM API 访问权限（OpenAI、千问等）
 
 ### 使用 uv 安装和运行（推荐）
@@ -67,7 +67,7 @@ pip install uv
 ```env
 OPENAI_API_KEY=你的API密钥
 OPENAI_API_BASE=你的API基础URL  # 可选，用于自定义端点
-OPENAI_MODEL_NAME=openai/你的模型名称
+MODEL=你的模型名称
 ```
 
 #### 3. 安装项目依赖
